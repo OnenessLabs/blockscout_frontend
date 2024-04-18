@@ -10,7 +10,7 @@ const semanticTokens = {
     },
     text_secondary: {
       'default': 'gray.500',
-      _dark: 'gray.400',
+      _dark: 'gray.200',
     },
     link: {
       'default': 'blue.600',
