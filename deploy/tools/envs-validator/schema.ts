@@ -352,13 +352,13 @@ const navItemExternalSchema: yup.ObjectSchema<NavItemExternal> = yup
 
 const footerLinkSchema: yup.ObjectSchema<CustomLink> = yup
   .object({
-    text: yup.string().default('').nullable(),
-    url: yup.string().test(urlTest),
+    text: yup.string().defined(),
+    url: yup.string().defined(),
   });
 
 const footerLinkGroupSchema: yup.ObjectSchema<CustomLinksGroup> = yup
   .object({
-    title: yup.string().default('').nullable(),
+    title: yup.string().defined(),
     links: yup
       .array()
       .of(footerLinkSchema)
